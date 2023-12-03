@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+}
+
+header,
+footer {
+  background-color: #ffffff;
+  color: #333;
+  text-align: center;
+  padding: 10px 0;
+}
+
+main {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #ddd;
+}
+
+@media (min-width: 600px) {
+  header,
+  footer {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+  }
+
+  header {
+    top: 0;
+  }
+
+  footer {
+    bottom: 0;
+  }
+
+  main {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  section {
+    flex: 1;
+    flex-basis: calc(50% - 40px);
+  }
+
+  main {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+#section1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40%;
+}
+
+.latest-news-content {
+  text-align: center;
+  color: white;
+}
+
+.latest-news-content h2 {
+  font-size: 2.25rem;
+  font-weight: normal;
+  font-family: "Raleway", sans-serif;
+}
+
+.latest-news-content p {
+  font-size: 1.125rem;
+  font-weight: normal;
+  font-family: "Georgia", serif;
+  line-height: 1.5;
+}
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.carousel-btn img {
+  height: 30px;
+  width: auto;
+}
+
+.carousel-btn.left {
+  left: 10px;
+}
+
+.carousel-btn.right {
+  right: 10px;
+}
+
+.carousel {
+  display: flex;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 25%;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-item h3,
+.carousel-item p {
+  margin: 10px 0;
+}
+
+#section3 .content-center {
+  text-align: center;
+}
+
+#section4 .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+#section4 img {
+  flex-basis: 5%;
+  width: 15%;
+  height: auto;
+}
+
+#section4 .text-content {
+  flex-basis: 50%;
+  padding: 10px;
+}
